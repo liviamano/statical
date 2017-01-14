@@ -18,12 +18,5 @@
 //$data->name = 'Livia';
 //$data->age = 21;
 
-$data = [
-    array('name'=>'Livia', 'age'=> '21'),
-    array('name'=>'Alisa', 'age'=> '18'),
-    array('name'=>'Andrea', 'age'=> '16')
-];
 
-echo json_encode($data);
-
-//require 'index.view.php';
+require 'index.view.php';
