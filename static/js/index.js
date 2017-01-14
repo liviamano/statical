@@ -4,17 +4,17 @@ $(function () {
         type: 'POST',
         success: function (response) {
             var data = $.parseJSON(response);
-            //alert(data_array[0]);
+            //alert(data);
             $("#chart").kendoChart({
                 dataSource: {
                     data: data
                 },
                 series: [{
-                    field: "age",
-                    name: "name"
+                    field: "population",
+                    name: "ethnicity"
                 }],
                 categoryAxis: {
-                    field: "name"
+                    field: "ethnicity"
                 }
             });
         }

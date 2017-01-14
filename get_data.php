@@ -1,4 +1,5 @@
 <?php
+$query = require 'factory.php';
 
 $data = [
     array('name' => 'Livia', 'age' => '21'),
@@ -6,5 +7,6 @@ $data = [
     array('name' => 'Andrea', 'age' => '16')
 ];
 
-echo json_encode($data);
+$persons = $query->selectAll('ethnicity_table');
 
+echo json_encode($persons);
