@@ -56,10 +56,10 @@
         <header>
             <ul class="w3-navbar w3-green">
                 <li class="w3-navitem w3-right">
-                    <button id="ethnicity">Ethnicity</button>
+                    <button id="ethnicity" class="w3-btn w3-green">Ethnicity</button>
                 </li>
                 <li class="w3-navitem w3-right">
-                    <button id="household">Household</button>
+                    <button id="household" class="w3-btn w3-green">Household</button>
                 </li>
             </ul>
         </header>
