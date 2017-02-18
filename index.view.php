@@ -75,6 +75,13 @@
                 <li class="w3-navitem w3-right">
                     <button id="male-city-based-schooling" class="w3-btn w3-green">Male</button>
                 </li>
+                <li class="w3-navitem w3-right">
+                    <button id="male-city-based-schooling" class="w3-btn w3-green">Male</button>
+                </li>
+                <li class="w3-navitem w3-right">
+                    <button id="dissabled-currently-schooled" class="w3-btn w3-green">Dissabled Currently Schooled
+                    </button>
+                </li>
                 <!--                <li class="w3-navitem w3-right">-->
                 <!--                    <button id="region-based-currently-schooled" class="w3-btn w3-green">Region Based Currently-->
                 <!--                        Schooled-->

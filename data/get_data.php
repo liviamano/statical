@@ -1,5 +1,5 @@
 <?php
-$query = require 'factory.php';
+$query = require '../factory.php';
 
 $persons = $query->selectAll('ethnicity_table');
 

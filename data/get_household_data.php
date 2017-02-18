@@ -1,5 +1,5 @@
 <?php
-$query = require 'factory.php';
+$query = require '../factory.php';
 
 $household = $query->selectAll('household_area_table');
 

@@ -7,21 +7,47 @@ $(function () {
     var regionBasedCurrentlySchooled = $('#region-based-currently-schooled');
     var femaleCityBasedSchooling = $('#female-city-based-schooling');
     var maleCityBasedSchooling = $('#male-city-based-schooling');
+    var dissabledCurrentlySchooled = $('#dissabled-currently-schooled');
+
+    dissabledCurrentlySchooled.click(function () {
+        $.ajax({
+            url: 'data/get_dissabled_currently_schooled.php',
+            type: 'POST',
+            success: function (response) {
+                var data = $.parseJSON(response);
+                $("#chart").kendoChart({
+                    title: {
+                        text: "Popullsia me aftesi te kufizuara sipas grupmoshes"
+                    },
+                    dataSource: {
+                        data: data
+                    },
+                    series: [{
+                        field: "attended",
+                        name: "groupage"
+                    }],
+                    categoryAxis: {
+                        field: "groupage"
+                    }
+                });
+            }
+        });
+    });
 
 
     femaleCityBasedSchooling.click(function () {
 
         var dataSource = new kendo.data.DataSource({
-           transport:{
-               read: {
-                   url: 'get_female_city_based_schooling_data.php',
-                   dataType: 'json'
-               }
-           }
+            transport: {
+                read: {
+                    url: 'get_female_city_based_schooling_data.php',
+                    dataType: 'json'
+                }
+            }
         });
 
         $('#chart').kendoGrid({
-           dataSource: dataSource,
+            dataSource: dataSource,
             columns: [{
                 field: "city",
                 title: "Qyteti"
@@ -57,7 +83,7 @@ $(function () {
     maleCityBasedSchooling.click(function () {
 
         var dataSource = new kendo.data.DataSource({
-            transport:{
+            transport: {
                 read: {
                     url: 'get_male_city_based_schooling_data.php',
                     dataType: 'json'
@@ -101,7 +127,7 @@ $(function () {
 
     ethnicity.click(function () {
         $.ajax({
-            url: 'get_data.php',
+            url: 'data/get_data.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
@@ -127,7 +153,7 @@ $(function () {
 
     household.click(function () {
         $.ajax({
-            url: 'get_household_data.php',
+            url: 'data/get_household_data.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
