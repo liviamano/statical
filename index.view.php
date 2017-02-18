@@ -13,6 +13,8 @@
     <script type="text/javascript" src="static/js/kendo/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/kendo/kendo.all.min.js"></script>
     <script type="text/javascript" src="static/js/kendo/kendo.dataviz.min.js"></script>
+    <script type="text/javascript" src="static/js/kendo/kendo.web.min.js"></script>
+
 
     <script type="text/javascript" src="static/js/index.js"></script>
 </head>
@@ -68,21 +70,27 @@
                     <button id="illeterate" class="w3-btn w3-green">Illeterates</button>
                 </li>
                 <li class="w3-navitem w3-right">
-                    <button id="region-based-currently-schooled" class="w3-btn w3-green">Region Based Currently
-                        Schooled
-                    </button>
+                    <button id="female-city-based-schooling" class="w3-btn w3-green">Female</button>
                 </li>
+                <li class="w3-navitem w3-right">
+                    <button id="male-city-based-schooling" class="w3-btn w3-green">Male</button>
+                </li>
+                <!--                <li class="w3-navitem w3-right">-->
+                <!--                    <button id="region-based-currently-schooled" class="w3-btn w3-green">Region Based Currently-->
+                <!--                        Schooled-->
+                <!--                    </button>-->
+                <!--                </li>-->
             </ul>
         </header>
 
         <div id="chart"></div>
-        <div id="chart-never-attended"></div>
-        <div id="chart-no-diploma"></div>
-        <div id="chart-primary"></div>
-        <div id="chart-low-secondary"></div>
-        <div id="chart-high-school"></div>
-        <div id="chart-uni-bachelor"></div>
-        <div id="chart-uni-phd"></div>
+        <!--        <div id="chart-never-attended"></div>-->
+        <!--        <div id="chart-no-diploma"></div>-->
+        <!--        <div id="chart-primary"></div>-->
+        <!--        <div id="chart-low-secondary"></div>-->
+        <!--        <div id="chart-high-school"></div>-->
+        <!--        <div id="chart-uni-bachelor"></div>-->
+        <!--        <div id="chart-uni-phd"></div>-->
 
 
     </div>
