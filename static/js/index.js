@@ -120,6 +120,7 @@ $(function () {
             url: 'data/region_based_currently_schooled.php',
             type: 'POST',
             success: function (response) {
+                //console.log(response);
                 var data = $.parseJSON(response);
                 for (var i = 0; i < data.length; i++) {
                     neverAttended.push(data[i]['never_attended']);
@@ -141,7 +142,7 @@ $(function () {
             },
             seriesDefaults: {
                 labels: {
-                    visible: true
+                    visible: true,
                     //format: "{0}%"
                 }
             },
