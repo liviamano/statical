@@ -26,8 +26,8 @@
                 <h3>Rreth Statical:</h3>
 
                 <p>
-                    Statical eshte nje gjenerues grafik i statistikave te CENSUSIT te mbledhura nga INSTAT
-                    pergjate viteve <i>2001-2011</i>
+                    Statical është një gjenerues grafik i statistikave të CENSUSIT të mbledhura nga INSTAT
+                    përgjatë viteve <i>2001-2011</i>
                 </p>
             </div>
             <div class="w3-center" id="about-us">
@@ -61,10 +61,30 @@
                 <li class="w3-navitem w3-right">
                     <button id="household" class="w3-btn w3-green">Household</button>
                 </li>
+                <li class="w3-navitem w3-right">
+                    <button id="highest-education" class="w3-btn w3-green">Highest Education Achieved</button>
+                </li>
+                <li class="w3-navitem w3-right">
+                    <button id="illeterate" class="w3-btn w3-green">Illeterates</button>
+                </li>
+                <li class="w3-navitem w3-right">
+                    <button id="region-based-currently-schooled" class="w3-btn w3-green">Region Based Currently
+                        Schooled
+                    </button>
+                </li>
             </ul>
         </header>
 
         <div id="chart"></div>
+        <div id="chart-never-attended"></div>
+        <div id="chart-no-diploma"></div>
+        <div id="chart-primary"></div>
+        <div id="chart-low-secondary"></div>
+        <div id="chart-high-school"></div>
+        <div id="chart-uni-bachelor"></div>
+        <div id="chart-uni-phd"></div>
+
+
     </div>
 </div>
 </body>
