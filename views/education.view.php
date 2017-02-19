@@ -25,30 +25,28 @@
 </nav>
 <div style="margin-left: 20%">
     <div class="w3-row-padding w3-blue">
-        <div class="w3-col m3 w3-right">
-            <button id="highest-education" class="w3-btn w3-blue">Highest Education Achieved
+        <div class="w3-col m3">
+            <button id="highest-education" class="w3-btn w3-blue">Arsimi me i larte i arrire
             </button>
         </div>
-        <div class="w3-col m3 w3-right">
+        <div class="w3-col m3">
             <button id="illiterate" class="w3-btn w3-blue">Analfabete</button>
         </div>
-        <div class="w3-col m3 w3-right">
-            <button id="gender-city-based-schooling" class="w3-btn w3-blue">Gjendja arsimore sipas
+        <div class="w3-col m3">
+            <button id="gender-city-based-schooling" class="w3-btn w3-blue">Niveli arsimor sipas
                 gjinise
-                dhe
-                qytetit
             </button>
         </div>
-        <div class="w3-col m3 w3-right">
-            <button id="city-based-schooling" class="w3-btn w3-blue">Gjendja arsimore sipas qytetit
+        <div class="w3-col m3">
+            <button id="city-based-schooling" class="w3-btn w3-blue">Niveli arsimor sipas qytetit
             </button>
         </div>
     </div>
     <div class="w3-container">
         <div id="chart"></div>
-        <div id="female-grid" class="w3-padding-16">Femra</div>
-        <div id="male-grid"> Meshkuj</div>
-        <div id="highest-education-grid" class="w3-padding-16"></div>
+        <div id="female-grid" class="w3-padding-16" style="display:none">Femra</div>
+        <div id="male-grid" style="display: none"> Meshkuj</div>
+        <div id="highest-education-grid" class="w3-padding-16" style="display: none">Arsimi me i larte i arrire</div>
     </div>
 </div>
 

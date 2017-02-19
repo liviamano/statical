@@ -4,6 +4,9 @@ $(function () {
     var illiterate = $('#illiterate');
     var cityBasedSchooling = $('#city-based-schooling');
     var genderCityBasedSchooling = $('#gender-city-based-schooling');
+    var femaleGrid = $('#female-grid');
+    var maleGrid = $('#male-grid');
+    var highestEducationGrid = $('#highest-education-grid');
 
     cityBasedSchooling.click(function () {
         $.ajax({
@@ -32,12 +35,12 @@ $(function () {
                         color: "#ef955f"
                     }],
                     valueAxes: [{
-                        title: { text: "gjimnazi" },
+                        title: {text: "gjimnazi"},
                         min: 0,
                         max: 100000
                     }, {
                         name: "uni",
-                        title: { text: "uni" },
+                        title: {text: "uni"},
                         min: 0,
                         max: 10000,
                         majorUnit: 32
@@ -52,7 +55,10 @@ $(function () {
     });
 
     genderCityBasedSchooling.click(function () {
-        genderCityBasedSchooling.show();
+
+
+        femaleGrid.css('display', 'inline-block');
+        maleGrid.css('display', 'inline-block');
         var femaleDataSource = new kendo.data.DataSource({
             transport: {
                 read: {
@@ -62,7 +68,7 @@ $(function () {
             }
         });
 
-        $('#female-grid').kendoGrid({
+        femaleGrid.kendoGrid({
             dataSource: femaleDataSource,
             columns: [{
                 field: "city",
@@ -74,7 +80,7 @@ $(function () {
                 },
                 {
                     field: "no_diploma",
-                    title: "Pa diplomë"
+                    title: "Pa diplome"
                 }, {
                     field: "primary",
                     title: "Fillore"
@@ -103,7 +109,7 @@ $(function () {
             }
         });
 
-        $('#male-grid').kendoGrid({
+        maleGrid.kendoGrid({
             dataSource: maleDataSource,
             columns: [{
                 field: "city",
@@ -137,6 +143,8 @@ $(function () {
     });
 
     highestEducation.click(function () {
+
+        highestEducationGrid.css('display', 'inline-block');
 
         var highestEducationData = new kendo.data.DataSource({
             transport: {
