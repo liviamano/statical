@@ -68,12 +68,20 @@
 </nav>
 <div style="margin-left: 21%">
     <div class="w3-row-padding w3-blue">
-        <div class="w3-col m4 w3-right">
+        <div class="w3-col m3 w3-right">
             <button id="population-by-city" class="w3-btn w3-blue">Numri i popullsise sipas rajoneve
             </button>
         </div>
-        <div class="w3-col m4 w3-right">
+        <div class="w3-col m3 w3-right">
             <button id="total-returned" class="w3-btn w3-blue">Totali i njerezve te kthyer nga emigracioni
+            </button>
+        </div>
+        <div class="w3-col m3 w3-right">
+            <button id="primary-low" class="w3-btn w3-blue">Numri i shkollave fillore dhe te mesme te uleta
+            </button>
+        </div>
+        <div class="w3-col m3 w3-right">
+            <button id="uni" class="w3-btn w3-blue">Numri i shkollave te larta
             </button>
         </div>
 
