@@ -1,53 +1,23 @@
 $(function () {
 
-    var ethnicity = $('#ethnicity');
-    var household = $('#household');
     var highestEducation = $('#highest-education');
-    var illeterate = $('#illeterate');
-    var regionBasedCurrentlySchooled = $('#region-based-currently-schooled');
-    var femaleCityBasedSchooling = $('#female-city-based-schooling');
-    var maleCityBasedSchooling = $('#male-city-based-schooling');
-    var dissabledCurrentlySchooled = $('#dissabled-currently-schooled');
+    var illiterate = $('#illiterate');
+    //var regionBasedCurrentlySchooled = $('#region-based-currently-schooled');
+    var genderCityBasedSchooling = $('#gender-city-based-schooling');
 
-    dissabledCurrentlySchooled.click(function () {
-        $.ajax({
-            url: 'data/get_dissabled_currently_schooled.php',
-            type: 'POST',
-            success: function (response) {
-                var data = $.parseJSON(response);
-                $("#chart").kendoChart({
-                    title: {
-                        text: "Popullsia me aftesi te kufizuara sipas grupmoshes"
-                    },
-                    dataSource: {
-                        data: data
-                    },
-                    series: [{
-                        field: "attended",
-                        name: "groupage"
-                    }],
-                    categoryAxis: {
-                        field: "groupage"
-                    }
-                });
-            }
-        });
-    });
-
-
-    femaleCityBasedSchooling.click(function () {
-
-        var dataSource = new kendo.data.DataSource({
+    genderCityBasedSchooling.click(function () {
+        genderCityBasedSchooling.show();
+        var femaleDataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: 'get_female_city_based_schooling_data.php',
+                    url: '../get_female_city_based_schooling_data.php',
                     dataType: 'json'
                 }
             }
         });
 
-        $('#chart').kendoGrid({
-            dataSource: dataSource,
+        $('#female-grid').kendoGrid({
+            dataSource: femaleDataSource,
             columns: [{
                 field: "city",
                 title: "Qyteti"
@@ -77,22 +47,18 @@ $(function () {
                     title: "Doktorature"
                 }]
         });
-    });
 
-
-    maleCityBasedSchooling.click(function () {
-
-        var dataSource = new kendo.data.DataSource({
+        var maleDataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: 'get_male_city_based_schooling_data.php',
+                    url: '../get_male_city_based_schooling_data.php',
                     dataType: 'json'
                 }
             }
         });
 
-        $('#chart').kendoGrid({
-            dataSource: dataSource,
+        $('#male-grid').kendoGrid({
+            dataSource: maleDataSource,
             columns: [{
                 field: "city",
                 title: "Qyteti"
@@ -122,64 +88,11 @@ $(function () {
                     title: "Doktorature"
                 }]
         });
-    });
-
-
-    ethnicity.click(function () {
-        $.ajax({
-            url: 'data/get_data.php',
-            type: 'POST',
-            success: function (response) {
-                var data = $.parseJSON(response);
-                //alert(data);
-                $("#chart").kendoChart({
-                    title: {
-                        text: "Numri i popullsise sipas ndarjes etnik"
-                    },
-                    dataSource: {
-                        data: data
-                    },
-                    series: [{
-                        field: "population",
-                        name: "ethnicity"
-                    }],
-                    categoryAxis: {
-                        field: "ethnicity"
-                    }
-                });
-            }
-        });
-    });
-
-    household.click(function () {
-        $.ajax({
-            url: 'data/get_household_data.php',
-            type: 'POST',
-            success: function (response) {
-                var data = $.parseJSON(response);
-                //alert(data);
-                $("#chart").kendoChart({
-                    title: {
-                        text: "Njesite ekonomike familjare sipas llojit dhe zones se banimit"
-                    },
-                    dataSource: {
-                        data: data
-                    },
-                    series: [{
-                        field: "njef_urbane",
-                        name: "lloji_njef"
-                    }],
-                    categoryAxis: {
-                        field: "lloji_njef"
-                    }
-                });
-            }
-        })
     });
 
     highestEducation.click(function () {
         $.ajax({
-            url: 'get_highest_education_achieved_data.php',
+            url: '../get_highest_education_achieved_data.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
@@ -191,7 +104,7 @@ $(function () {
                         data: data
                     },
                     series: [{
-                        field: 'primary',
+                        field: 'uni_bachelor',
                         name: 'groupage'
                     }],
                     categoryAxis: {
@@ -202,23 +115,30 @@ $(function () {
         })
     });
 
-    illeterate.click(function () {
+    illiterate.click(function () {
         $.ajax({
-            url: 'get_illeterate_data.php',
+            url: '../get_illiterate_data.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
-                $('#chars').kendoChart({
+                $('#chart').kendoChart({
                     title: {
-                        text: "Illeterates"
+                        text: "Analfabet"
+                    },
+                    seriesDefaults: {
+                        type: 'area'
                     },
                     dataSource: {
                         data: data
                     },
                     series: [{
                         field: 'not_schooled',
-                        name: 'groupage'
-                    }],
+                        name: 'Analfabete'
+                    }, {
+                        field: 'schooled',
+                        name: 'Te shkolluar'
+                    }
+                    ],
                     categoryAxis: {
                         field: 'groupage'
                     }
