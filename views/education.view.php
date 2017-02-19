@@ -25,18 +25,22 @@
 </nav>
 <div style="margin-left: 20%">
     <div class="w3-row-padding w3-blue">
-        <div class="w3-col m4 w3-right">
+        <div class="w3-col m3 w3-right">
             <button id="highest-education" class="w3-btn w3-blue">Highest Education Achieved
             </button>
         </div>
-        <div class="w3-col m4 w3-right">
+        <div class="w3-col m3 w3-right">
             <button id="illiterate" class="w3-btn w3-blue">Analfabete</button>
         </div>
-        <div class="w3-col m4 w3-right">
+        <div class="w3-col m3 w3-right">
             <button id="gender-city-based-schooling" class="w3-btn w3-blue">Gjendja arsimore sipas
                 gjinise
                 dhe
                 qytetit
+            </button>
+        </div>
+        <div class="w3-col m3 w3-right">
+            <button id="city-based-schooling" class="w3-btn w3-blue">Gjendja arsimore sipas qytetit
             </button>
         </div>
     </div>
@@ -44,6 +48,7 @@
         <div id="chart"></div>
         <div id="female-grid" class="w3-padding-16">Femra</div>
         <div id="male-grid"> Meshkuj</div>
+        <div id="highest-education-grid" class="w3-padding-16"></div>
     </div>
 </div>
 
