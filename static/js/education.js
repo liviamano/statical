@@ -10,7 +10,7 @@ $(function () {
 
     cityBasedSchooling.click(function () {
         $.ajax({
-            url: '../get_city_based_schooled.php',
+            url: '../data/get_city_based_schooled.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
@@ -62,7 +62,7 @@ $(function () {
         var femaleDataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: '../get_female_city_based_schooling_data.php',
+                    url: '../data/get_female_city_based_schooling_data.php',
                     dataType: 'json'
                 }
             }
@@ -103,7 +103,7 @@ $(function () {
         var maleDataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: '../get_male_city_based_schooling_data.php',
+                    url: '../data/get_male_city_based_schooling_data.php',
                     dataType: 'json'
                 }
             }
@@ -121,7 +121,7 @@ $(function () {
                 },
                 {
                     field: "no_diploma",
-                    title: "Pa diplomë"
+                    title: "Pa diplome"
                 }, {
                     field: "primary",
                     title: "Fillore"
@@ -149,7 +149,7 @@ $(function () {
         var highestEducationData = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: '../get_highest_education_achieved_data.php',
+                    url: '../data/get_highest_education_achieved_data.php',
                     dataType: 'json'
                 }
             }
@@ -185,7 +185,7 @@ $(function () {
 
     illiterate.click(function () {
         $.ajax({
-            url: '../get_illiterate_data.php',
+            url: '../data/get_illiterate_data.php',
             type: 'POST',
             success: function (response) {
                 var data = $.parseJSON(response);
@@ -200,13 +200,12 @@ $(function () {
                         data: data
                     },
                     series: [{
+                        field: 'scholed',
+                        name: 'Te shkolluar'
+                    }, {
                         field: 'not_schooled',
                         name: 'Analfabete'
-                    }, {
-                        field: 'schooled',
-                        name: 'Te shkolluar'
-                    }
-                    ],
+                    }],
                     categoryAxis: {
                         field: 'groupage'
                     }
@@ -214,59 +213,5 @@ $(function () {
             }
         })
     });
-
-    //regionBasedCurrentlySchooled.click(function () {
-    //    var neverAttended = [];
-    //    var noDiploma = [];
-    //    var primary = [];
-    //    var lowSecondary = [];
-    //    var highSchool = [];
-    //    var uniBachelor = [];
-    //    var uniPhd = [];
-    //    $.ajax({
-    //        url: 'region_based_currently_schooled.php',
-    //        type: 'POST',
-    //        success: function (response) {
-    //            //console.log(response);
-    //            var data = $.parseJSON(response);
-    //            for (var i = 0; i < data.length; i++) {
-    //                neverAttended.push(data[i]['never_attended']);
-    //                //console.log(neverAttended[i]);
-    //                noDiploma.push(data[i]['no_diploma']);
-    //                primary.push(data[i]['primary']);
-    //                lowSecondary.push(data[i]['low_secondary']);
-    //                highSchool.push(data[i]['high_school']);
-    //                uniBachelor.push(data[i]['uni_bachelor']);
-    //                uniPhd.push(data[i]['uni_master']);
-    //            }
-    //        }
-    //    });
-    //    //console.log(neverAttended[0][0]);
-    //    $('#chart-never-attended').kendoChart({
-    //        title: {
-    //            text: "NEVER ATTENDED SCHOOL"
-    //        },
-    //        legend: {
-    //            position: "bottom"
-    //        },
-    //        seriesDefaults: {
-    //            labels: {
-    //                visible: true,
-    //                format: "{0}%"
-    //            }
-    //        },
-    //        series: [{
-    //            type: "pie",
-    //            data: [{
-    //                category: "Urban",
-    //                value: neverAttended[0]
-    //            }, {
-    //                category: "Rural",
-    //                value: neverAttended[1]
-    //            }]
-    //        }]
-    //    })
-    //});
-
 });
 

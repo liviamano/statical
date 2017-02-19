@@ -1,5 +1,5 @@
 <?php
-$query = require 'factory.php';
+$query = require '../factory.php';
 
 $male_schooled = $query->selectAll('male_city_based_schooling');
 

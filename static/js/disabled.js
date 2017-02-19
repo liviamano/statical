@@ -16,38 +16,59 @@ $(function () {
                         data: data
                     },
                     seriesDefaults: {
-                        type: "line"
+                        type: "area"
                     },
-                    series: [{
-                        name: 'Kane ndjekur',
-                        field: "attended"
-                    }, {
-                        name: 'Nuk kane ndjekur',
-                        field: "never_attended"
-                    }],
-                    //xAxis: {
-                    //    title: "Title",
-                    //    axisCrossingValues: [0, 10000],
-                    //    labels: {
-                    //        format: "N0"
-                    //    }
-                    //},
-                    //yAxes: [{
-                    //    title: {
-                    //        text: "Kane ndjekur"
-                    //    }
-                    //}, {
-                    //    name: "Nuk kane ndjekur",
-                    //    title: {
-                    //        text: "Nuk kane ndjekur"
-                    //    }
-                    //}],
+                    series: [
+                        {
+                            name: 'Total',
+                            field: "total"
+                        }, {
+                            name: 'Kane ndjekur',
+                            field: "attended"
+                        }, {
+                            name: 'Nuk kane ndjekur',
+                            field: "never_attended"
+                        }],
                     categoryAxis: {
                         field: "groupage"
                     }
                 });
             }
         });
+        $.ajax({
+            url: '../data/get_gender_based_dissabled_schooled.php',
+            type: 'POST',
+            success: function (response) {
+                var data = $.parseJSON(response);
+                $('#pie-chart').kendoChart({
+                    title: {
+                        text: "Raporti Femer-Mashkull i popullsise me aftesi te kufizuara qe nuk jane shkolluar kurre"
+                    },
+                    legend: {
+                        position: "top"
+                    },
+                    dataSource: {
+                        data: data
+                    },
+                    seriesDefaults: {
+                        labels: {
+                            visible: true,
+                            format: "{0}%"
+                        }
+                    },
+                    series: [{
+                        type: "pie",
+                        data: [{
+                            category: "femer",
+                            value: 61
+                        }, {
+                            category: "mashkull",
+                            value: 39
+                        }]
+                    }]
+                })
+            }
+        })
     });
 
 });

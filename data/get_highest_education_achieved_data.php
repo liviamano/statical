@@ -1,5 +1,5 @@
 <?php
-$query = require 'factory.php';
+$query = require '../factory.php';
 
 $highestEducation = $query->selectAll('highest_education_achieved');
 
