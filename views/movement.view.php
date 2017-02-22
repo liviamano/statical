@@ -57,11 +57,11 @@
             </li>
             <li style="border-bottom:none">
                 <span>Madrit Kacabumi</span>
-                <span><i>madrid.kacabumi@fshnstudent.info</i></span>
+                <span><i>madrit.kacabumi@fshnstudent.info</i></span>
             </li>
             <li style="border-bottom:none">
-                <span>Margarit Zisi</span>
-                <span>margarit.zisi@fshnstudent.info</span>
+                <span>Margarit Zisaj</span>
+                <span>margarit.zisaj@fshnstudent.info</span>
             </li>
         </ul>
     </div>
@@ -69,15 +69,15 @@
 <div style="margin-left: 21%">
     <div class="w3-row-padding w3-blue">
         <div class="w3-col m3 w3-right">
-            <button id="population-by-city" class="w3-btn w3-blue">Numri i popullsise sipas rajoneve
+            <button id="population-by-city" class="w3-btn w3-blue">Popullsia sipas rajoneve
+            </button>
+        </div>
+        <div class="w3-col m3">
+            <button id="total-returned" class="w3-btn w3-blue">Kthyer nga emigracioni
             </button>
         </div>
         <div class="w3-col m3 w3-right">
-            <button id="total-returned" class="w3-btn w3-blue">Totali i njerezve te kthyer nga emigracioni
-            </button>
-        </div>
-        <div class="w3-col m3 w3-right">
-            <button id="primary-low" class="w3-btn w3-blue">Numri i shkollave fillore dhe te mesme te uleta
+            <button id="primary-low" class="w3-btn w3-blue">Numri i shkollave fillore dhe te mesme
             </button>
         </div>
         <div class="w3-col m3 w3-right">

@@ -54,11 +54,11 @@
             </li>
             <li style="border-bottom:none">
                 <span>Madrit Kacabumi</span>
-                <span><i>madrid.kacabumi@fshnstudent.info</i></span>
+                <span><i>madrit.kacabumi@fshnstudent.info</i></span>
             </li>
             <li style="border-bottom:none">
-                <span>Margarit Zisi</span>
-                <span>margarit.zisi@fshnstudent.info</span>
+                <span>Margarit Zisaj</span>
+                <span>margarit.zisaj@fshnstudent.info</span>
             </li>
         </ul>
     </div>

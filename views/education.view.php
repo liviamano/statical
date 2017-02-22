@@ -56,11 +56,11 @@
             </li>
             <li style="border-bottom:none">
                 <span>Madrit Kacabumi</span>
-                <span><i>madrid.kacabumi@fshnstudent.info</i></span>
+                <span><i>madrit.kacabumi@fshnstudent.info</i></span>
             </li>
             <li style="border-bottom:none">
-                <span>Margarit Zisi</span>
-                <span>margarit.zisi@fshnstudent.info</span>
+                <span>Margarit Zisaj</span>
+                <span>margarit.zisaj@fshnstudent.info</span>
             </li>
         </ul>
     </div>
@@ -68,21 +68,22 @@
 <div style="margin-left: 21%">
     <div class="w3-row-padding w3-blue">
         <div class="w3-col m3">
-            <button id="highest-education" class="w3-btn w3-blue">Arsimi me i larte i arrire
+            <button id="illiterate" class="w3-btn w3-blue">Analfabete</button>
+        </div>
+        <div class="w3-col m3">
+            <button id="city-based-schooling" class="w3-btn w3-blue">Niveli arsimor sipas qytetit
             </button>
         </div>
         <div class="w3-col m3">
-            <button id="illiterate" class="w3-btn w3-blue">Analfabete</button>
+            <button id="highest-education" class="w3-btn w3-blue">Arsimi me i larte i arrire
+            </button>
         </div>
         <div class="w3-col m3">
             <button id="gender-city-based-schooling" class="w3-btn w3-blue">Niveli arsimor sipas
                 gjinise
             </button>
         </div>
-        <div class="w3-col m3">
-            <button id="city-based-schooling" class="w3-btn w3-blue">Niveli arsimor sipas qytetit
-            </button>
-        </div>
+
     </div>
     <div class="w3-container">
         <div id="chart"></div>
